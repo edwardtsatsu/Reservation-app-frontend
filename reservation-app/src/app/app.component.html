@@ -1,4 +1,21 @@
-<div class="container">
-    <h1>Reservation Booking</h1>
-    <app-root></app-root>
+<div class="form-container">
+    <form (submit)="createReservation()">
+        <mat-form-field>
+            <input [(ngModel)]="start" name="start" matInput [matDatepicker]="picker" placeholder="Choose a start date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="end" name="end" matInput [matDatepicker]="picker" placeholder="Choose a end date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="email" name="email" matInput placeholder="email" type="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="title" name="title" matInput placeholder="title">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Make Reservation</button>
+    </form>
 </div>

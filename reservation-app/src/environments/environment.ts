@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API_URL_RESERVATION: 'http://localhost:8080/reservation',
+  API_URL_RESERVATION: 'http://localhost:8080',
+
 };
 
 /*

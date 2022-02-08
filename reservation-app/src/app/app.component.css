@@ -3,3 +3,13 @@
     margin: 50px auto 0 auto;
 
 }
+
+.form-container {
+    margin-top: 50px;
+    max-width: 350px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
