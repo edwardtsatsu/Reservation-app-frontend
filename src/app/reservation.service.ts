@@ -13,11 +13,11 @@ export class ReservationService {
   private API_URL_RESERVATION = environment.API_URL_RESERVATION;
 
   constructor(private http: HttpClient){}
-  
 
- public createReservation(reservationDate:string,email:string,title:string): Observable<Reservation>{
-    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, 
-    {reservationDate,email,title});
+
+ public createReservation(date:string,email:string,title:string): Observable<Reservation>{
+  const availabilityId = "ded19796-a58b-4f48-848f-e4d79021a1bf";
+    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId});
   }
 
  public deleteReservation(reservationId:string, email:string): Observable<any> {

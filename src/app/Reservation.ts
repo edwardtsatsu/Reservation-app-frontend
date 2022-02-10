@@ -1,5 +1,5 @@
 export interface Reservation {
-    reservationDate:string;
+    date:string;
     email:string,
     title:string
 
