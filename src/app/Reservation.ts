@@ -1,7 +1,5 @@
 export interface Reservation {
-    availabilityId:string;
-    start:string,
-    end:string,
+    reservationDate:string;
     email:string,
     title:string
 

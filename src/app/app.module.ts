@@ -10,12 +10,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import { AvailabilitiesComponent } from './availabilities/availabilities.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AvailabilitiesComponent,
+    HomeComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +34,13 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatButtonModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    AppRoutingModule,
+    MatToolbarModule
+   
   ],
-  providers: [MatNativeDateModule],
+  providers: [MatNativeDateModule, MatToolbarModule],
   bootstrap: [AppComponent]
+
 })
 export class AppModule { }
