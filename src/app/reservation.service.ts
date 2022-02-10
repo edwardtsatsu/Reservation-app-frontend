@@ -10,7 +10,7 @@ import { Reservation } from './Reservation';
 })
 export class ReservationService {
 
-  private API_URL_RESERVATION = environment.API_URL_RESERVATION;
+  private API_URL_RESERVATION = environment.API_URL;
 
   constructor(private http: HttpClient){}
 
