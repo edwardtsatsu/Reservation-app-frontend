@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Availability } from './availability';
+import { Availability } from './Availability';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +17,5 @@ export class AvailabilityService {
     return this.http.post<Availability>(`${this.API_URL}/availabilities`,{startTime, endTime, slot, day});
 
   }
-  
+
 }

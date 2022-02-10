@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Availability } from '../availability';
-import { AvailabilityService } from '../availability.service';
+import { Availability } from './Availability';
+import { AvailabilityService } from './availability.service';
 
 @Component({
   selector: 'app-availabilities',
