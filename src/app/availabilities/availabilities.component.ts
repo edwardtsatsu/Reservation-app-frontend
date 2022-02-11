@@ -24,6 +24,14 @@ export class AvailabilitiesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+   restForm(){
+    this.slot = null;
+    this.day = null;
+    this.startTime = null;
+    this.endTime = null;
+
+   }
+
   public CreateAvailability() {
     this.successMsg = '';
     this.errorMsg = '';
