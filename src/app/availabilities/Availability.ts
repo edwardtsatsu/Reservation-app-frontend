@@ -1,7 +1,8 @@
 export interface Availability {
-    startTime: string,
-    endTime: string,
-    slot:number,
-    day:string
+    id: string;
+    startTime: string;
+    endTime: string;
+    slot:number;
+    day:string;
 
 }

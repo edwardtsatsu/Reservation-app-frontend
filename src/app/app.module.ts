@@ -16,6 +16,8 @@ import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReservationComponent } from './reservation/reservation.component';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { AvailabilityService } from './availabilities/availability.service';
+import { ReservationService } from './reservation/reservation.service';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
   
    
   ],
-  providers: [MatNativeDateModule, MatToolbarModule],
+  providers: [MatNativeDateModule, MatToolbarModule,AvailabilityService,ReservationService],
   bootstrap: [AppComponent]
 
 })
