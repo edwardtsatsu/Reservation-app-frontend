@@ -14,7 +14,14 @@
         <mat-form-field>
             <input [(ngModel)]="day" name="day" matInput placeholder="day" type="day">
         </mat-form-field>
-        <button mat-raised-button color="primary">Create Availability</button>
+        <div class="row">
+            <div class="col">
+                <button mat-raised-button color="primary">Create Availability</button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary">Delete Availability</button>
+            </div>
+        </div>
     </form>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
