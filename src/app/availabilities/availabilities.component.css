@@ -1,0 +1,33 @@
+.form-container {
+    margin-top: 50px;
+    width: 30em;
+    height: 30vh;
+  }
+
+  .form-container button {
+    width: 50%;
+    align-self: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .error {
+    background-color: #d84f4f;
+    padding: 10px;
+  }
+  
+  .success {
+    background-color: #73cc73;
+    padding: 10px;
+  }
+
+.example {
+    display: flex;
+    justify-content: center;
+}
+.k-form {
+    width: 400px;
+}

@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReservationComponent } from './reservation/reservation.component';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 
 
 @NgModule({
@@ -37,11 +38,13 @@ import { ReservationComponent } from './reservation/reservation.component';
     MatNativeDateModule,
     AppRoutingModule,
     MatToolbarModule,
- 
+    NgxMaterialTimepickerModule,
+  
    
   ],
   providers: [MatNativeDateModule, MatToolbarModule],
   bootstrap: [AppComponent]
 
 })
+
 export class AppModule { }

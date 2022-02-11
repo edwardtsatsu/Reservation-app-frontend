@@ -1,2 +1,26 @@
-<p>availabilities works!</p>
+<mat-toolbar *ngIf="successMsg" color="accent">{{ successMsg }}</mat-toolbar>
+<mat-toolbar *ngIf="errorMsg" color="warn">{{ errorMsg }}</mat-toolbar>
+<div class="form-container">
+    <form (submit)="createAvailability()">
+        <mat-form-field>
+            <input [(ngModel)]="startTime" name="startTime" matInput  placeholder="startTime" id="text" class="timepicker"/>
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="endTime" name="endTime" matInput placeholder="endTime">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="slot" name="slot" matInput placeholder="slot">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="day" name="day" matInput placeholder="day" type="day">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Create Availability</button>
+    </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
 
+</script>
+<script>
+    const timer = document.querySelector('.timepicker');
+    M.Timepicker.int(timer,{});
+</script>
