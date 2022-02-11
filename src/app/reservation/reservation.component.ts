@@ -23,6 +23,13 @@ export class ReservationComponent implements OnInit {
   ngOnInit() {
   }
 
+  restForm(){
+    this.date = null;
+    this.title = null;
+    this.email = null;
+
+  }
+
  public createReservation() {
     this.successMsg = '';
     this.errorMsg = '';
