@@ -16,8 +16,7 @@ export class ReservationService {
 
 
  public createReservation(date:string,email:string,title:string): Observable<Reservation>{
-  const availabilityId = "ded19796-a58b-4f48-848f-e4d79021a1bf";
-    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId});
+    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title});
   }
 
  public deleteReservation(reservationId:any, email:string): Observable<any> {
