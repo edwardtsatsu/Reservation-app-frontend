@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Availability } from './Availability';
-import { AvailabilityService } from './availability.service';
+import { Availability } from '../Availability';
+import { AvailabilityService } from '../availability.service';
 
 
 @Component({
@@ -16,8 +16,7 @@ export class AvailabilitiesComponent implements OnInit {
   endTime: string;
   slot: number;
   day: string;
-  public availabilities: Availability[];
-  public deleteAvailability: Availability;
+  
 
 
   constructor(private availabilityService: AvailabilityService) { }
@@ -49,28 +48,30 @@ export class AvailabilitiesComponent implements OnInit {
       )
   }
 
-  public getAvailabilities(): void {
-    this.availabilityService.getAvailabilities().subscribe(
-      (response:Availability[]) =>{
-        this.availabilities = response;
-        console.log(this.availabilities);
-      },
-      (error: HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
+  // public getAvailabilities(): void {
+  //   this.availabilityService.getAvailabilities().subscribe(
+  //     (response:Availability[]) =>{
+  //       this.availabilities = response;
+  //       console.log(this.availabilities);
+  //     },
+  //     (error: HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
 
-  public onDeleteAvailability(availabilityId: string): void {
-    this.availabilityService.deleteAvailability(availabilityId).subscribe(
-      (response:void) => {
-        console.log(response);
-        this.getAvailabilities();
-      },
-      (error:HttpErrorResponse) => {
-        alert(error.message);
-      }
-    );
-  }
+  // public onDeleteAvailability(availabilityId: string): void {
+  //   this.availabilityService.deleteAvailability(availabilityId).subscribe(
+  //     (response:void) => {
+  //       console.log(response);
+  //       this.getAvailabilities();
+  //     },
+  //     (error:HttpErrorResponse) => {
+  //       alert(error.message);
+  //     }
+  //   );
+  // }
+
+  
 
 }

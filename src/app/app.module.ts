@@ -15,9 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReservationComponent } from './reservation/reservation.component';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
-import { AvailabilityService } from './availabilities/availability.service';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { AvailabilityService } from './availability.service';
 import { ReservationService } from './reservation/reservation.service';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ReservationService } from './reservation/reservation.service';
     AppComponent,
     AvailabilitiesComponent,
     HomeComponent,
-    ReservationComponent
+    ReservationComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -41,8 +43,8 @@ import { ReservationService } from './reservation/reservation.service';
     AppRoutingModule,
     MatToolbarModule,
     NgxMaterialTimepickerModule,
-  
-   
+    MatProgressSpinnerModule,
+    
   ],
   providers: [MatNativeDateModule, MatToolbarModule,AvailabilityService,ReservationService],
   bootstrap: [AppComponent]

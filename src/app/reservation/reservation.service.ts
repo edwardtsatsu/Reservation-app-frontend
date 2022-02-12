@@ -20,7 +20,7 @@ export class ReservationService {
     return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId});
   }
 
- public deleteReservation(reservationId:string, email:string): Observable<any> {
+ public deleteReservation(reservationId:any, email:string): Observable<any> {
     return this.http.delete(`${this.API_URL_RESERVATION}/reservation/${reservationId}/${email}`);
   }
 

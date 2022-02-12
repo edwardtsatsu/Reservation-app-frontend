@@ -19,7 +19,7 @@ export class AvailabilityService {
 
   }
 
-  public deleteAvailability(availabilityId: string): Observable<void> {
+  public deleteAvailability(availabilityId: any): Observable<void> {
     return this.http.delete<void>(`${this.API_URL}/availabilities/${availabilityId}`);
   }
 
