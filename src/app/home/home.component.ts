@@ -32,8 +32,8 @@ export class HomeComponent implements OnInit {
       });
   }
 
-  deleteAvailability(availabilityId: any) {
-    this.availabilityService.deleteAvailability(availabilityId)
+  deleteAvailability(id: string) {
+    this.availabilityService.deleteAvailability(id)
       .pipe(
         mergeMap(() => this.availabilityService.getAvailabilities())
       )

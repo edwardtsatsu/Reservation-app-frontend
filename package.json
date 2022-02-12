@@ -30,6 +30,7 @@
     "moment": "^2.29.1",
     "ngx-mat-timepicker": "^13.0.0",
     "ngx-material-timepicker": "^5.5.3",
+    "node": "^17.4.0",
     "nz-datepicker": "^0.4.17",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

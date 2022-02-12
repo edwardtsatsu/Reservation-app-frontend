@@ -19,8 +19,8 @@ export class AvailabilityService {
 
   }
 
-  public deleteAvailability(availabilityId: any): Observable<void> {
-    return this.http.delete<void>(`${this.API_URL}/availabilities/${availabilityId}`);
+  public deleteAvailability(id: string): Observable<any> {
+    return this.http.delete(`${this.API_URL}/availabilities/${id}`);
   }
 
   public getAvailabilities() :Observable<Availability[]> {

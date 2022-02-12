@@ -3,7 +3,7 @@
 <mat-toolbar *ngIf="successMsg" color="accent">{{ successMsg }}</mat-toolbar>
 <mat-toolbar *ngIf="errorMsg" color="warn">{{ errorMsg }}</mat-toolbar>
 
-<div *ngIf="!loading" >
+<div *ngIf="!loading">
   <table mat-table [dataSource]="availabilities" class="mat-elevation-z8">
     <ng-container matColumnDef="startTime">
       <th mat-header-cell *matHeaderCellDef> startTime </th>
@@ -23,7 +23,7 @@
     </ng-container>
     <ng-container matColumnDef="delete">
       <th mat-header-cell *matHeaderCellDef> Delete </th>
-      <td mat-cell *matCellDef="let available"><button (click)="deleteAvailability(available.availabilityId)"
+      <td mat-cell *matCellDef="let available"><button (click)="deleteAvailability(available.id)"
           mat-raised-button color="warn">Delete</button></td>
     </ng-container>
 

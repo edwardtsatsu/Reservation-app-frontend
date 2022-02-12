@@ -1,5 +1,5 @@
 export interface Availability {
-    availabilityid: any;
+    id: string;
     startTime: string;
     endTime: string;
     slot:number;
