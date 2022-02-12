@@ -45,10 +45,8 @@ export class ReservationComponent implements OnInit {
         const reservationDate = new Date(createdReservation.date).toDateString();
         this.successMsg = `Reservation Booked Successfully for ${reservationDate}`;
         this.restForm();
-      },
-      (error: ErrorEvent) => {
-        this.errorMsg = error.error.message;
-      });
+      } );
+
   }
 
   public fetchAvailableSlot(){

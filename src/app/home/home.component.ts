@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import { mergeMap } from 'rxjs';
 import { Availability } from '../Availability';
 import { AvailabilityService } from '../availability.service';
-
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +11,20 @@ import { AvailabilityService } from '../availability.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  
   public loading = true;
   public errorMsg: string;
   public successMsg: string;
-  public availabilities: Availability[];
+  public availabilities: Availability[] = [];
   public columns = ['startTime', 'endTime', 'slot', 'day','delete'];
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = new MatTableDataSource<Availability>(this.availabilities);
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
 
   constructor(private availabilityService: AvailabilityService) { }

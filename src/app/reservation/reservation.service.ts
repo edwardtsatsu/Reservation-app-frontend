@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { error } from 'console';
+import { catchError, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Reservation } from './Reservation';
 
@@ -16,7 +17,9 @@ export class ReservationService {
 
 
  public createReservation(date:string,email:string,title:string,availabilityId:string): Observable<Reservation>{
-    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId});
+
+    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId})
+    
   }
 
  public deleteReservation(reservationId:any, email:string): Observable<any> {

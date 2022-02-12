@@ -20,6 +20,7 @@ import { AvailabilityService } from './availability.service';
 import { ReservationService } from './reservation/reservation.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -48,6 +49,8 @@ import { MatSelectModule } from '@angular/material/select';
     NgxMaterialTimepickerModule,
     MatProgressSpinnerModule,
     MatSelectModule,
+    MatPaginatorModule
+    
 
     
   ],
