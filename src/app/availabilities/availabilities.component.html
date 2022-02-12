@@ -10,19 +10,23 @@
             <input [(ngModel)]="endTime" type="time" name="endTime" matInput placeholder="endTime">
         </mat-form-field>
         <mat-form-field>
-            <input [(ngModel)]="slot" type="number" name="slot" matInput placeholder="slot">
+            <input [(ngModel)]="slot" type="number" name="slot" matInput placeholder="slot" min="1">
         </mat-form-field>
         <mat-form-field>
-            <input [(ngModel)]="day" name="day" matInput placeholder="day" type="day">
+            <mat-label>Select Day</mat-label>
+            <mat-select [(ngModel)]="day">
+                <mat-option  *ngFor="let item of days" [value]="item">
+                    {{item}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
         <div class="row">
             <div class="col">
                 <button mat-raised-button color="primary">Create Availability</button>
             </div>
             <div class="col">
-                <button mat-raised-button color="primary" (click)="restForm()" >RESET</button>
+                <button mat-raised-button color="primary" (click)="restForm()">RESET</button>
             </div>
         </div>
     </form>
 </div>
-

@@ -3,7 +3,15 @@
 <div class="form-container">
     <form (submit)="createReservation()">
       <mat-form-field>
-        <input [(ngModel)]="date" type="date" name="reservationDate" matInput  placeholder="Input a date">
+        <input [(ngModel)]="date" (change)="fetchAvailableSlot()" type="date" name="reservationDate" matInput  placeholder="Input a date">
+      </mat-form-field>
+      <mat-form-field [hidden]="display">
+        <mat-label>Select Time Slot</mat-label>
+        <mat-select [(ngModel)]="availabilityId" name="availabilityId">
+          <mat-option  *ngFor="let item of availabilities" [value]="item.id">
+              {{item.startTime}} to {{item.endTime}}
+          </mat-option>
+      </mat-select>
       </mat-form-field>
       <mat-form-field>
         <input [(ngModel)]="title" name="name" matInput placeholder="title">

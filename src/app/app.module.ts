@@ -19,6 +19,8 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { AvailabilityService } from './availability.service';
 import { ReservationService } from './reservation/reservation.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSelectModule } from '@angular/material/select';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AvailabilitiesComponent,
     HomeComponent,
     ReservationComponent,
+   
   
   ],
   imports: [
@@ -44,6 +47,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatToolbarModule,
     NgxMaterialTimepickerModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
+
     
   ],
   providers: [MatNativeDateModule, MatToolbarModule,AvailabilityService,ReservationService],

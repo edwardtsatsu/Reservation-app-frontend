@@ -15,8 +15,8 @@ export class ReservationService {
   constructor(private http: HttpClient){}
 
 
- public createReservation(date:string,email:string,title:string): Observable<Reservation>{
-    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title});
+ public createReservation(date:string,email:string,title:string,availabilityId:string): Observable<Reservation>{
+    return this.http.post<Reservation>(`${this.API_URL_RESERVATION}/reservation`, {date,email,title,availabilityId});
   }
 
  public deleteReservation(reservationId:any, email:string): Observable<any> {

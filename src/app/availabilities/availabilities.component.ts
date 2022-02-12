@@ -17,6 +17,9 @@ export class AvailabilitiesComponent implements OnInit {
   slot: number;
   day: string;
   
+  days: string[] = [
+    "MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"
+  ];
 
 
   constructor(private availabilityService: AvailabilityService) { }

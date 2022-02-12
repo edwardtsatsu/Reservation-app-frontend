@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -10,7 +10,7 @@ import { Availability } from './Availability';
 export class AvailabilityService {
 
   private API_URL = environment.API_URL;
-
+  
 
   constructor(private http:HttpClient) { }
 
@@ -23,8 +23,9 @@ export class AvailabilityService {
     return this.http.delete(`${this.API_URL}/availabilities/${id}`);
   }
 
-  public getAvailabilities() :Observable<Availability[]> {
-    return this.http.get<Availability[]>(`${this.API_URL}/availabilities`);
+  public getAvailabilities(date:string = "") :Observable<Availability[]> {
+    let param = new HttpParams().set('date',date);
+    return this.http.get<Availability[]>(`${this.API_URL}/availabilities`,{params:param});
   }
 
 }
